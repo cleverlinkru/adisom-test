@@ -21,6 +21,10 @@ return new class extends Migration
             $table->string('language');
             $table->string('region');
             $table->datetime('last_video_published_at');
+            
+            $table->index('category');
+            $table->index('language');
+            $table->index('region');
         });
     }
 
