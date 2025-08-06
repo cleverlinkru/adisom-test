@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Apps\AdisomTest\Http\Controllers;
 
 abstract class Controller
 {

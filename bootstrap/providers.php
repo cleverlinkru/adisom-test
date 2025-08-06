@@ -1,5 +1,5 @@
 <?php
 
 return [
-    App\Providers\AppServiceProvider::class,
+    Apps\AdisomTest\Providers\AppServiceProvider::class,
 ];

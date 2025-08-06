@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Apps\AdisomTest\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

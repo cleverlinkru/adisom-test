@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Apps\AdisomTest\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
