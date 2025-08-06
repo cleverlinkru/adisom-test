@@ -27,7 +27,7 @@ class RequestExecutionLoging
         Cache::put('last_execution_time', $executionTime);
         
         $model = new RequestExecutionLog();
-        $model->url = $request->fullUrl();
+        $model->url = $request->path();
         $model->execution_time = $executionTime;
         $model->save();
         
