@@ -26,6 +26,8 @@ class IndexRecommendationsQueryHandler
             language: $data->language,
             region: $data->region,
             last_video_period: $data->last_video_period,
+            order_by: $data->order_by,
+            order: $data->order,
         );
     }
 }

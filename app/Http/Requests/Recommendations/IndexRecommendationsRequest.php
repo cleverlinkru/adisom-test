@@ -28,6 +28,8 @@ class IndexRecommendationsRequest extends FormRequest
             'language' => ['string'],
             'region' => ['string'],
             'last_video_period' => ['string', 'in:last_7_days,last_month,last_year'],
+            'order_by' => ['string', 'in:engagement_rate,average_views'],
+            'order' => ['string', 'in:asc,desc'],
         ];
     }
     
@@ -38,6 +40,8 @@ class IndexRecommendationsRequest extends FormRequest
             $this->input('max_subscribers'). '-' .
             $this->input('language'). '-' .
             $this->input('region'). '-' .
-            $this->input('last_video_period');
+            $this->input('last_video_period'). '-' .
+            $this->input('order_by'). '-' .
+            $this->input('order');
     }
 }

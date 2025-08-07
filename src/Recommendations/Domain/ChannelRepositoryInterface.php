@@ -17,5 +17,7 @@ interface ChannelRepositoryInterface
         ?string $language,
         ?string $region,
         ?string $last_video_period,
+        ?string $order_by,
+        ?string $order,
     ): Collection;
 }

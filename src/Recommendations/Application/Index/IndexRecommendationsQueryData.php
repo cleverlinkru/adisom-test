@@ -11,6 +11,8 @@ class IndexRecommendationsQueryData
         public readonly ?string $language,
         public readonly ?string $region,
         public readonly ?string $last_video_period,
+        public readonly ?string $order_by,
+        public readonly ?string $order,
     )
     {
     }

@@ -26,6 +26,8 @@ class IndexController extends Controller
                 language: $request->input('language') ?? null,
                 region: $request->input('region') ?? null,
                 last_video_period: $request->input('last_video_period') ?? null,
+                order_by: $request->input('order_by') ?? null,
+                order: $request->input('order') ?? null,
             ));
         });
     }

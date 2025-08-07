@@ -24,6 +24,8 @@ class ChannelsFinder
         ?string $language,
         ?string $region,
         ?string $last_video_period,
+        ?string $order_by,
+        ?string $order,
     ): Collection
     {
         return $this->channelRepository->findBy(
@@ -33,6 +35,8 @@ class ChannelsFinder
             language: $language,
             region: $region,
             last_video_period: $last_video_period,
+            order_by: $order_by,
+            order: $order,
         );
     }
 }

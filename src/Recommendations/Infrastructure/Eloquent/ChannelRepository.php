@@ -19,6 +19,8 @@ class ChannelRepository implements ChannelRepositoryInterface
         ?string $language,
         ?string $region,
         ?string $last_video_period,
+        ?string $order_by,
+        ?string $order,
     ): Collection
     {
         $eloquentChannels = ChannelsModel::query()
@@ -52,8 +54,13 @@ class ChannelRepository implements ChannelRepositoryInterface
                 }
                 $q->where('last_video_published_at', '>=', $dateline);
             })
-            ->orderByDesc('engagement_rate')
-            ->orderByDesc('average_views')
+            ->when($order_by !== null, function ($q) use ($order_by, $order) {
+                $q->orderBy($order_by, $order ?? 'desc');
+            })
+            ->when($order_by === null, function ($q) {
+                $q->orderByDesc('engagement_rate');
+                $q->orderByDesc('average_views');
+            })
             ->limit(10)
             ->get();
         
